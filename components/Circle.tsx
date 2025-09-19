@@ -38,7 +38,7 @@ const squares: ISquare[] = [
 export default function Circle() {
 	const [fadedIn, setFadedIn] = useState(false)
 	const [quarter, setQuarter] = useState(-1)
-	const [rotation, setRotation] = useState(0) // <- NEW state for smooth rotation
+	const [rotation, setRotation] = useState(0)
 	const contentRef = useRef<HTMLDivElement>(null)
 
 	useEffect(() => {
@@ -52,11 +52,9 @@ export default function Circle() {
 				setFadedIn(false)
 			}
 
-			// ✅ Calculate continuous progress
 			const screenProgress = scrollTop / sectionHeight
-			setRotation(screenProgress * 90) // 90° per "screen"
+			setRotation(screenProgress * 90)
 
-			// ✅ Only snap to quarters for the text
 			if (scroll < 10) {
 				const screensScrolled = Math.floor(screenProgress) - 1
 				setQuarter(Math.max(screensScrolled, 0))
@@ -118,11 +116,7 @@ export default function Circle() {
 				<div className={cn(css.circle)}>
 					<div className={css.circleBG} />
 					<img
-						style={{
-							// opacity: quarter === 4 || quarter === -1 ? 0 : 1,
-							transform: `rotate(${rotation - 135}deg)`, // ✅ smooth rotation
-							// transition: 'transform 0.05s linear', // optional to smooth even more
-						}}
+						style={{ transform: `rotate(${rotation - 135}deg)` }}
 						className={css.quarterCircle}
 						src='./circle_quarter.svg'
 					/>
