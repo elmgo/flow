@@ -8,7 +8,6 @@
 		justify-content: center;
 		transition: 0.5s;
 		opacity: 1;
-		//  transform: translateY(200px);
 
 		&.rootFadedIn {
 			.circle {
@@ -16,8 +15,6 @@
 					box-shadow: 0 0 450px #43a5c341, 0 0 40px #43a5c341;
 				}
 			}
-			// opacity: 1;
-			// transform: translateY(0px);
 		}
 
 		.quarters {
@@ -124,7 +121,7 @@
 			}
 
 			.quarterCircle {
-				// transition: 0.5s;
+				transition: 0.1s;
 				position: absolute;
 				top: 0;
 				left: 0;

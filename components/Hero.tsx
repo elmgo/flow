@@ -1,5 +1,4 @@
 'use client'
-
 import { useEffect, useState } from 'react'
 import css from './Hero.module.scss'
 import cn from 'classnames'
@@ -16,7 +15,6 @@ export default function Hero() {
 			}
 			if (scrollTop > 200) {
 				setFadedIn(false)
-				console.log('fade out')
 			}
 		}
 

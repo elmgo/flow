@@ -12,18 +12,16 @@
 		img,
 		p,
 		h1 {
-			transition: 0.5s;
+			transition: 1s cubic-bezier(0.16, 1, 0.3, 1);
 			opacity: 0;
 			transform: translateY(30px);
 		}
 
 		img {
-			transform: translateY(30px) scale(2);
+			transform: translateY(30px) scale(2.5);
 			width: 100px;
 			display: block;
 			margin: 0 auto 30px;
-			transition: 0.5s;
-			transition-delay: 0s;
 
 			@media (min-width: 1920px) {
 				width: 140px;
