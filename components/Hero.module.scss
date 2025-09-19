@@ -1,0 +1,60 @@
+.root {
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	.inner {
+		margin-top: 10vh;
+		max-width: 600px;
+
+		img,
+		p,
+		h1 {
+			transition: 0.5s;
+			opacity: 0;
+			transform: translateY(30px);
+		}
+
+		img {
+			transform: translateY(30px) scale(2);
+			width: 100px;
+			display: block;
+			margin: 0 auto 30px;
+			transition: 0.5s;
+			transition-delay: 0s;
+
+			@media (min-width: 1920px) {
+				width: 140px;
+				margin: 0 auto 50px;
+			}
+		}
+
+		.thinTitle {
+			transition-delay: 0.1s;
+		}
+
+		.boldTitle {
+			transition-delay: 0.2s;
+		}
+
+		p {
+			margin-top: 20px;
+			transition-delay: 0.3s;
+		}
+
+		&.visible {
+			img,
+			p,
+			h1 {
+				opacity: 1;
+				transform: translateY(0) scale(1);
+			}
+		}
+
+		@media (min-width: 1920px) {
+			max-width: 900px;
+		}
+	}
+}
