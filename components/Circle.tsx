@@ -9,9 +9,8 @@ interface ISquare {
 	text: string
 }
 
-const sectionHeight = 800
-
-const squares: ISquare[] = [
+const SECTION_HEIGHT = 800
+const SQUARES: ISquare[] = [
 	{
 		titleThin: 'THE FIRST LINE',
 		titleBold: 'AND THE SECOND',
@@ -51,7 +50,7 @@ export default function Circle() {
 				setFadedIn(false)
 			}
 
-			const screenProgress = scrollTop / sectionHeight
+			const screenProgress = scrollTop / SECTION_HEIGHT
 			setRotation(screenProgress * 90)
 
 			if (scroll < 10) {
@@ -103,14 +102,14 @@ export default function Circle() {
 	return (
 		<div
 			className={css.wrapper}
-			style={{ height: `${sectionHeight * (squares.length + 1)}px` }}
+			style={{ height: `${SECTION_HEIGHT * (SQUARES.length + 1)}px` }}
 		>
 			<div
 				ref={contentRef}
 				className={cn(css.root, fadedIn && css.rootFadedIn)}
 			>
 				<div className={css.quarters}>
-					{squares.map((square, index) => renderSquare(square, index))}
+					{SQUARES.map((square, index) => renderSquare(square, index))}
 				</div>
 				<div className={cn(css.circle)}>
 					<div className={css.circleBG} />

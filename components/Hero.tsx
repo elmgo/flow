@@ -30,8 +30,6 @@ export default function Hero() {
 				<h1 className={css.thinTitle}>
 					We Build Better
 					<br />
-				</h1>
-				<h1 className={css.boldTitle}>
 					<b>Drivers & Riders</b>
 				</h1>
 				<p>
