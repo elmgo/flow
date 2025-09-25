@@ -1,15 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-	--background: #ffffff;
 	font-family: var(--font-inter);
 }
 
 body {
+	margin: 0;
+
 	* {
 		box-sizing: border-box;
 	}
-
-	margin: 0;
-	font-family: Arial, Helvetica, sans-serif;
 }
 
 h1,
@@ -22,6 +24,13 @@ h2 {
 	font-weight: 200;
 }
 
+h1 b,
+h2 b {
+	letter-spacing: -0.04em;
+	font-weight: 700;
+	color: #43a5c3;
+}
+
 h1 {
 	line-height: 56px;
 	font-size: 56px;
@@ -30,13 +39,6 @@ h1 {
 h2 {
 	line-height: 46px;
 	font-size: 46px;
-}
-
-h1 b,
-h2 b {
-	letter-spacing: -0.04em;
-	font-weight: 700;
-	color: #43a5c3;
 }
 
 p {

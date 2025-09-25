@@ -9,7 +9,7 @@ interface ISquare {
 	text: string
 }
 
-const SECTION_HEIGHT = 800
+const SECTION_HEIGHT = 700
 const SQUARES: ISquare[] = [
 	{
 		titleThin: 'THE FIRST LINE',

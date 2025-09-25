@@ -1,67 +1,69 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      fontFamily: {
-        // primary: 'sans-serif',
-        secondary: "Secondary",
-      },
+	content: [
+		'./app/**/*.{js,ts,jsx,tsx,mdx}',
+		'./pages/**/*.{js,ts,jsx,tsx,mdx}',
+		'./components/**/*.{js,ts,jsx,tsx,mdx}',
+	],
+	theme: {
+		extend: {
+			fontFamily: {
+				primary: 'Inter',
+			},
 
-      spacing: {
-        4: "4px",
-      },
+			spacing: {
+				1: '1px',
+				2: '2px',
+				3: '3px',
+				4: '4px',
+				5: '5px',
+				6: '6px',
+				7: '7px',
+				8: '8px',
+				9: '9px',
+				10: '10px',
+			},
 
-      colors: {
-        transparent: "transparent",
-        current: "currentColor",
+			colors: {
+				transparent: 'transparent',
+				current: 'currentColor',
 
-        red: "#e95444",
-        green: "#29cb7f",
-        blue: "#9FC2CC",
-        primary: "#ffffff",
-        primaryText: "#000000",
-        primaryLight: "#ffffff",
-        secondary: "#EEE0CB",
-        secondaryDark: "#c9b392ff",
+				primary: '#43A5C3',
+				primaryLightest: '#D8EEF5',
+				secondary: '#CB324C',
+				grey: '#4F4F4F',
+				greyLight: '#B8B8B8',
+				greyLightest: '#F6F6F6',
+			},
 
-        crPrimary: "#F5EEE6",
-        crBlue: "#4162C1",
-        crPink: "#EE5A7E",
-      },
-
-      animation: {
-        fadeUp: "fadeUp 0.7s ease-in-out",
-        fadeDown: "fadeDown 0.7s ease-in-out",
-      },
-      keyframes: {
-        fadeUp: {
-          "0%": {
-            transform: "translateY(10px)",
-            opacity: "0",
-          },
-          "50%": {
-            transform: "translateY(0)",
-            opacity: "1",
-          },
-        },
-        fadeDown: {
-          "0%": {
-            transform: "translateY(0)",
-            opacity: "1",
-          },
-          "50%": {
-            transform: "translateY(10px)",
-            opacity: "0",
-          },
-        },
-      },
-    },
-  },
-  plugins: [],
-};
+			animation: {
+				fadeUp: 'fadeUp 0.7s ease-in-out',
+				fadeDown: 'fadeDown 0.7s ease-in-out',
+			},
+			keyframes: {
+				fadeUp: {
+					'0%': {
+						transform: 'translateY(10px)',
+						opacity: '0',
+					},
+					'50%': {
+						transform: 'translateY(0)',
+						opacity: '1',
+					},
+				},
+				fadeDown: {
+					'0%': {
+						transform: 'translateY(0)',
+						opacity: '1',
+					},
+					'50%': {
+						transform: 'translateY(10px)',
+						opacity: '0',
+					},
+				},
+			},
+		},
+	},
+	plugins: [],
+}
