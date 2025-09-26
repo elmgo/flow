@@ -10,6 +10,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				primary: 'Inter',
+				secondary: 'Karla',
 			},
 
 			spacing: {
@@ -33,6 +34,8 @@ module.exports = {
 				80: '80px',
 				100: '100px',
 				200: '200px',
+				250: '250px',
+				300: '300px',
 			},
 
 			colors: {
@@ -40,6 +43,7 @@ module.exports = {
 				current: 'currentColor',
 
 				primary: '#43A5C3',
+				primaryDark: '#298aa8',
 				primaryLight: '#5eb3cd',
 				primaryLightest: '#D8EEF5',
 				secondary: '#CB324C',
@@ -50,6 +54,7 @@ module.exports = {
 			},
 
 			boxShadow: {
+				header: '0 4px 50px rgba(0,0,0,0.1)',
 				component: '0 1px 0px rgba(0,0,0,0.1)',
 				panel: '0 2px 7px rgba(0,0,0,0.1)',
 				panelLarge:

@@ -20,7 +20,7 @@ export default function LayoutSimple({
 
 	return (
 		<div className='flex flex-col min-h-screen bg-gradient-to-b from-black/5 to-black/0'>
-			<div className='p-20 bg-white'>
+			<div className='p-20 bg-white shadow-header'>
 				<img src='/logo.svg' className='h-40' />
 			</div>
 			<div className='flex items-center justify-center flex-1'>
