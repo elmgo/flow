@@ -7,11 +7,16 @@
 }
 
 body {
+	@apply bg-greyLightest;
 	margin: 0;
 
 	* {
 		box-sizing: border-box;
 	}
+}
+
+.button {
+	@apply font-primary bg-primary p-10 rounded-md text-white font-bold flex justify-center items-center min-w-[170px];
 }
 
 h1,
@@ -50,6 +55,10 @@ p {
 	font-weight: 300;
 	transition: 0.5s;
 	color: #909090;
+}
+
+.panel {
+	@apply p-20 bg-white rounded-lg shadow-panel;
 }
 
 @media (min-width: 1920px) {

@@ -27,7 +27,7 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={`${inter.variable} ${karla.variable} antialiased`}>
-				<div className='my-4'>{children}</div>
+				<div>{children}</div>
 			</body>
 		</html>
 	)

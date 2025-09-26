@@ -23,6 +23,15 @@ module.exports = {
 				8: '8px',
 				9: '9px',
 				10: '10px',
+				20: '20px',
+				30: '30px',
+				40: '40px',
+				50: '50px',
+				60: '60px',
+				70: '70px',
+				80: '80px',
+				100: '100px',
+				200: '200px',
 			},
 
 			colors: {
@@ -32,9 +41,14 @@ module.exports = {
 				primary: '#43A5C3',
 				primaryLightest: '#D8EEF5',
 				secondary: '#CB324C',
+				greyDark: '#363636',
 				grey: '#4F4F4F',
 				greyLight: '#B8B8B8',
 				greyLightest: '#F6F6F6',
+			},
+
+			boxShadow: {
+				panel: '0 2px 7px rgba(0,0,0,0.1)',
 			},
 
 			animation: {

@@ -1,9 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { api } from './api'
+import authReducer from './authSlice'
+
+const token =
+	typeof window !== 'undefined' ? localStorage.getItem('token') : null
 
 export const store = configureStore({
 	reducer: {
 		[api.reducerPath]: api.reducer,
+		auth: authReducer,
+	},
+	preloadedState: {
+		auth: { token },
 	},
 	middleware: (getDefaultMiddleware) =>
 		getDefaultMiddleware().concat(api.middleware),
