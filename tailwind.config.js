@@ -23,6 +23,7 @@ module.exports = {
 				8: '8px',
 				9: '9px',
 				10: '10px',
+				14: '14px',
 				20: '20px',
 				30: '30px',
 				40: '40px',
@@ -39,6 +40,7 @@ module.exports = {
 				current: 'currentColor',
 
 				primary: '#43A5C3',
+				primaryLight: '#5eb3cd',
 				primaryLightest: '#D8EEF5',
 				secondary: '#CB324C',
 				greyDark: '#363636',
@@ -48,7 +50,10 @@ module.exports = {
 			},
 
 			boxShadow: {
+				component: '0 1px 0px rgba(0,0,0,0.1)',
 				panel: '0 2px 7px rgba(0,0,0,0.1)',
+				panelLarge:
+					'0 2px 7px rgba(0,0,0,0.1), 0 30px 50px rgba(0,0,0,0.1)',
 			},
 
 			animation: {

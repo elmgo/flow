@@ -6,7 +6,7 @@ import { setCredentials } from '@/store/authSlice'
 import LayoutSimple from './LayoutSimple'
 import toast from 'react-hot-toast'
 
-export default function LoginPage() {
+export default function RegisterPage() {
 	const dispatch = useDispatch()
 	const [login, { isLoading, error }] = useLoginMutation()
 	const [username, setUsername] = useState('')
@@ -36,7 +36,7 @@ export default function LoginPage() {
 					<div className='flex flex-col items-center justify-center mb-20'>
 						{/* <img src='/login.svg' className='w-40' /> */}
 						<h2 className='text-[30px] text-center text-primary'>
-							Sign in
+							Sign up
 						</h2>
 					</div>
 					<input

@@ -1,9 +1,11 @@
 import { logout } from '@/store/authSlice'
 import Dropdown from './Dropdown'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from '@/store/store'
 
 export default function Header() {
 	const dispatch = useDispatch()
+	const user = useSelector((state: RootState) => state.auth.user)
 
 	function doLogout() {
 		dispatch(logout())

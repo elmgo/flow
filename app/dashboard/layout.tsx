@@ -5,13 +5,24 @@ import Header from '@/components/Header'
 import Sidebar from '@/components/Sidebar'
 import LoginPage from '@/components/LoginPage'
 import { useHydrated } from '@/hooks/useHydrated'
+import { Toaster } from 'react-hot-toast'
+import { redirect, usePathname } from 'next/navigation'
 
 function LayoutContent({ children }: { children: React.ReactNode }) {
 	const hydrated = useHydrated()
 	const token = useSelector((state: RootState) => state.auth.token)
+	const pathname = usePathname()
+	const isRegister = pathname.includes('register')
 
 	if (!hydrated) {
 		return null
+	}
+
+	if (isRegister) {
+		if (!token) {
+			return children
+		}
+		redirect('/dashboard')
 	}
 
 	if (!token) {
@@ -36,6 +47,7 @@ export default function DashboardLayout({
 }) {
 	return (
 		<Provider store={store}>
+			<Toaster position='bottom-right' reverseOrder={false} />
 			<LayoutContent>{children}</LayoutContent>
 		</Provider>
 	)
