@@ -9,10 +9,10 @@ interface IDropdownItem {
 
 export default function Dropdown({
 	items,
-	width,
+	className,
 }: {
 	items: IDropdownItem[]
-	width: number
+	className: string
 }) {
 	const [isOpen, setIsOpen] = useState(false)
 	const ref = useRef<HTMLDivElement>(null)
@@ -33,16 +33,14 @@ export default function Dropdown({
 	}
 
 	return (
-		<div
-			style={{ width }}
-			className='relative inline-block text-left'
-			ref={ref}
-		>
+		<div className={`${className} relative inline-block text-left`} ref={ref}>
 			<button
 				onClick={() => setIsOpen(!isOpen)}
-				className='flex items-center justify-between w-full p-10 transition duration-200 bg-white rounded-lg shadow text-greyDark hover:bg-primaryLightest'
+				className='flex border-1 border-black/10 items-center justify-between w-full px-20 py-10 h-[44px] transition duration-200 bg-white rounded-lg shadow text-greyDark hover:bg-primaryLightest'
 			>
-				<span>Options</span>
+				<div className='flex items-center w-full h-full mr-10 text-left border-r-1 border-greyLight'>
+					Options
+				</div>
 				<svg
 					className={`w-[12px] h-[12px] ml-2 transform transition-transform duration-200 ${
 						isOpen ? 'rotate-180' : ''
@@ -70,7 +68,7 @@ export default function Dropdown({
 				leaveFrom='transform opacity-100 scale-100'
 				leaveTo='transform opacity-0 scale-95'
 			>
-				<div className='absolute z-50 w-full mt-2 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
+				<div className='absolute z-50 w-full mt-4 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
 					<ul>
 						{items.map((item, index) => (
 							<li

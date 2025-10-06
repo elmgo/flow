@@ -13,6 +13,10 @@ module.exports = {
 				secondary: 'Karla',
 			},
 
+			borderWidth: {
+				1: '1px',
+			},
+
 			spacing: {
 				1: '1px',
 				2: '2px',
@@ -36,6 +40,7 @@ module.exports = {
 				200: '200px',
 				250: '250px',
 				300: '300px',
+				400: '400px',
 			},
 
 			colors: {

@@ -34,7 +34,7 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
 			<Sidebar />
 			<div className='flex flex-col flex-1'>
 				<Header />
-				<div className='flex-1 pr-20'>{children}</div>
+				<div className='flex-1 pb-20 pr-20'>{children}</div>
 			</div>
 		</div>
 	)

@@ -14,9 +14,9 @@ export default function Header() {
 	return (
 		<div className='flex items-center py-20 h-80'>
 			<span className='mr-10 font-bold'>Session:</span>
-			<div className='flex'>
+			<div className='flex w-full pr-20'>
 				<Dropdown
-					width={400}
+					className='w-400'
 					items={[
 						{ label: 'Item one', onClick: () => {} },
 						{ label: 'Another one', onClick: () => {} },
@@ -24,7 +24,7 @@ export default function Header() {
 						{ label: 'And a fourth', onClick: () => {} },
 					]}
 				/>
-				<div>
+				<div className='flex items-center justify-end flex-1'>
 					<span onClick={doLogout}>Logout</span>
 				</div>
 			</div>
