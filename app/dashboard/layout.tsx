@@ -7,6 +7,7 @@ import LoginPage from '@/components/LoginPage'
 import { useHydrated } from '@/hooks/useHydrated'
 import { Toaster } from 'react-hot-toast'
 import { redirect, usePathname } from 'next/navigation'
+import { LoadScriptNext } from '@react-google-maps/api'
 
 function LayoutContent({ children }: { children: React.ReactNode }) {
 	const hydrated = useHydrated()
@@ -30,13 +31,17 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
 	}
 
 	return (
-		<div className='flex text-[14px] h-screen font-primary bg-greyLightest text-greyDark'>
-			<Sidebar />
-			<div className='flex flex-col flex-1'>
-				<Header />
-				<div className='flex-1 pb-20 pr-20'>{children}</div>
+		<LoadScriptNext
+			googleMapsApiKey={'AIzaSyAsYkx5LPK1qQk7vAPoHakUHFppRtBx8TE'}
+		>
+			<div className='flex text-[14px] h-screen font-primary bg-greyLightest text-greyDark'>
+				<Sidebar />
+				<div className='flex flex-col flex-1'>
+					<Header />
+					<div className='flex-1 pb-20 pr-20'>{children}</div>
+				</div>
 			</div>
-		</div>
+		</LoadScriptNext>
 	)
 }
 

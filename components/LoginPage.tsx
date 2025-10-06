@@ -18,6 +18,7 @@ export default function LoginPage() {
 			const result = await login({ username, password }).unwrap()
 			dispatch(setCredentials(result))
 			localStorage.setItem('token', result.token)
+			localStorage.setItem('user', JSON.stringify(result.user))
 		} catch (err) {
 			// console.error('Login failed', err)
 		}

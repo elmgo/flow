@@ -52,6 +52,7 @@ export default function LayersTree({ selected, onToggle }: LayersTreeProps) {
 	const [expanded, setExpanded] = useState<Record<string, boolean>>({
 		telemetry: true,
 		events: true,
+		road: true,
 	})
 
 	const toggleExpand = (id: string) => {
@@ -60,7 +61,7 @@ export default function LayersTree({ selected, onToggle }: LayersTreeProps) {
 
 	return (
 		<div>
-			<div className='flex items-center gap-10 pb-20 mb-20 font-bold border-b-1 border-r-greyLight'>
+			<div className='flex items-center gap-10 pb-20 mt-10 mb-20 font-bold border-b-1 border-r-greyLight'>
 				<img className='w-[25px]' src='/icon_layers.svg' />
 				Layers
 			</div>
@@ -99,8 +100,8 @@ export default function LayersTree({ selected, onToggle }: LayersTreeProps) {
 												className={clsx(
 													'ml-6 w-14 h-14 rounded-sm border flex items-center justify-center',
 													isChecked
-														? 'bg-primary border-primary'
-														: 'border-gray-300',
+														? 'bg-primaryLight border-primary'
+														: 'border-gray-400',
 												)}
 											>
 												{isChecked && (

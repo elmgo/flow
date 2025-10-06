@@ -5,7 +5,7 @@ import LayersTree from '@/components/LayersTree'
 import Map from '@/components/Map'
 import { useState } from 'react'
 
-export default function DashboardPage() {
+export default function PlannerPage() {
 	const [selectedLayers, setSelectedLayers] = useState<string[]>([])
 
 	function onLayerSelect(layerId: string) {

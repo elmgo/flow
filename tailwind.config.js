@@ -61,7 +61,7 @@ module.exports = {
 			boxShadow: {
 				header: '0 4px 50px rgba(0,0,0,0.1)',
 				component: '0 1px 0px rgba(0,0,0,0.1)',
-				panel: '0 2px 7px rgba(0,0,0,0.1)',
+				panel: '0 10px 12px rgba(0,0,0,0.08)',
 				panelLarge:
 					'0 2px 7px rgba(0,0,0,0.1), 0 30px 50px rgba(0,0,0,0.1)',
 			},

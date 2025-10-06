@@ -1,9 +1,4 @@
 'use client'
-import { useSelector } from 'react-redux'
-import { RootState } from '../store/store'
-
-import LoginPage from '@/components/LoginPage'
-import { useHydrated } from '@/hooks/useHydrated'
 import { Transition } from '@headlessui/react'
 import { useEffect, useState } from 'react'
 

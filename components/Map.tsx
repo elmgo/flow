@@ -9,7 +9,7 @@ const containerStyle = {
 }
 
 const center = {
-	lat: 40.21, // Coimbra area
+	lat: 40.21,
 	lng: -8.4,
 }
 
@@ -113,26 +113,24 @@ const path = [
 
 export default function Map() {
 	return (
-		<LoadScript googleMapsApiKey={'AIzaSyAsYkx5LPK1qQk7vAPoHakUHFppRtBx8TE'}>
-			<GoogleMap
-				mapContainerStyle={containerStyle}
-				center={center}
-				zoom={13}
+		<GoogleMap
+			mapContainerStyle={containerStyle}
+			center={center}
+			zoom={13}
+			options={{
+				disableDefaultUI: true,
+				styles: mapStyles,
+			}}
+		>
+			{/* Yellow driving route */}
+			<Polyline
+				path={path}
 				options={{
-					disableDefaultUI: true,
-					styles: mapStyles,
+					strokeColor: '#FFD700',
+					strokeOpacity: 1,
+					strokeWeight: 4,
 				}}
-			>
-				{/* Yellow driving route */}
-				<Polyline
-					path={path}
-					options={{
-						strokeColor: '#FFD700',
-						strokeOpacity: 1,
-						strokeWeight: 4,
-					}}
-				/>
-			</GoogleMap>
-		</LoadScript>
+			/>
+		</GoogleMap>
 	)
 }
