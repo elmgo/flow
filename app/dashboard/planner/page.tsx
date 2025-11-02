@@ -17,8 +17,8 @@ export default function PlannerPage() {
 	}
 
 	return (
-		<div className='flex h-full root'>
-			<div className='mr-20 panel w-250'>
+		<div className='flex h-full gap-10 root'>
+			<div className='panel w-250'>
 				<LayersTree selected={selectedLayers} onToggle={onLayerSelect} />
 			</div>
 			<div className='flex flex-col flex-1 pb-20 panel'>

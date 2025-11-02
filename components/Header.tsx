@@ -31,8 +31,8 @@ export default function Header() {
 
 	return (
 		<>
-			<div className='flex items-center mt-20'>
-				<div className='flex flex-1 gap-20 mr-20 bg-white rounded-lg p-14'>
+			<div className='flex items-center mt-10'>
+				<div className='flex flex-1 gap-20 mr-20 rounded-lg p-14'>
 					<img src='/icon_stats.svg' />
 					{renderStatCell(
 						'KM driven',
@@ -51,7 +51,7 @@ export default function Header() {
 				</div>
 
 				<div
-					className='flex items-center cursor-pointer gap-14'
+					className='flex items-center mr-20 cursor-pointer gap-14'
 					onClick={() => setShowUserMenu(!showUserMenu)}
 				>
 					<img src='/icon_user.svg' />
@@ -63,7 +63,7 @@ export default function Header() {
 				</div>
 
 				{showUserMenu && (
-					<div className='absolute right-0 z-50 overflow-hidden bg-white border border-gray-200 rounded-md shadow-md w-200 mt-70'>
+					<div className='absolute z-50 overflow-hidden bg-white border border-gray-200 rounded-md shadow-md right-30 w-200 mt-90'>
 						<div
 							className='p-10 rounded-sm cursor-pointer hover:bg-primaryLightest'
 							onClick={doLogout}
@@ -74,23 +74,15 @@ export default function Header() {
 				)}
 			</div>
 
-			<div className='my-20 mr-20 !shadow-sm panel !overflow-visible !py-10 !px-20 flex'>
+			<div className='my-10 mr-20 !shadow-sm panel !overflow-visible !py-10 !px-20 flex'>
 				<div className='flex items-center gap-20'>
 					<span className='font-bold'>Session:</span>
 					<div className='flex items-center w-full pr-20'>
-						<Dropdown
-							className='w-400'
-							items={[
-								{ label: 'Item one', onClick: () => {} },
-								{ label: 'Another one', onClick: () => {} },
-								{ label: 'Third', onClick: () => {} },
-								{ label: 'And a fourth', onClick: () => {} },
-							]}
-						/>
+						<Dropdown className='w-400' />
 					</div>
 				</div>
 				<div className='flex items-center flex-1 gap-20'>
-					<div className='font-bold'>Compare session to</div>
+					<div className='font-bold'>Compare session to:</div>
 					<Dropdown
 						className='w-200'
 						items={[

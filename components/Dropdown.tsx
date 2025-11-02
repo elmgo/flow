@@ -9,9 +9,11 @@ interface IDropdownItem {
 
 export default function Dropdown({
 	items,
+	onClick = () => {},
 	className,
 }: {
-	items: IDropdownItem[]
+	items?: IDropdownItem[]
+	onClick?: () => any
 	className: string
 }) {
 	const [isOpen, setIsOpen] = useState(false)
@@ -35,7 +37,7 @@ export default function Dropdown({
 	return (
 		<div className={`${className} relative inline-block text-left`} ref={ref}>
 			<button
-				onClick={() => setIsOpen(!isOpen)}
+				onClick={items ? () => setIsOpen(!isOpen) : onClick}
 				className='flex border-1 border-black/10 items-center justify-between w-full px-20 py-10 h-[44px] transition duration-200 bg-white rounded-lg shadow text-greyDark hover:bg-primaryLightest'
 			>
 				<div className='flex items-center w-full h-full mr-10 text-left border-r-1 border-greyLight'>
@@ -70,15 +72,16 @@ export default function Dropdown({
 			>
 				<div className='absolute z-50 w-full mt-4 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
 					<ul>
-						{items.map((item, index) => (
-							<li
-								key={item.label}
-								onClick={() => onItemClick(item)}
-								className='p-10 cursor-pointer hover:bg-primaryLightest'
-							>
-								{item.label}
-							</li>
-						))}
+						{items &&
+							items.map((item, index) => (
+								<li
+									key={item.label}
+									onClick={() => onItemClick(item)}
+									className='p-10 cursor-pointer hover:bg-primaryLightest'
+								>
+									{item.label}
+								</li>
+							))}
 					</ul>
 				</div>
 			</Transition>

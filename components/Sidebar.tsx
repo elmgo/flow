@@ -21,7 +21,7 @@ export default function Sidebar() {
 	]
 
 	return (
-		<div className='p-10 mr-20 w-200 border-r-1'>
+		<div className='p-10 pt-8 mr-20 w-200 border-r-1'>
 			<img src='/logo.svg' className='h-40 m-10 mb-20' />
 			{items.map((item: IMenuItem) => {
 				const selected = pathname.includes(item.route)
@@ -33,8 +33,8 @@ export default function Sidebar() {
 						className={`${
 							selected
 								? 'bg-primaryLightest border-opacity-10'
-								: 'hover:bg-black/5 hover:border-opacity-10'
-						} select-none mb-4 flex gap-8 items-center duration-200 px-10 py-8 border-black rounded-lg cursor-pointer  border-[1px] border-opacity-0 `}
+								: 'hover:bg-white hover:border-opacity-0'
+						} select-none mb-8 flex gap-8 items-center duration-200 px-10 py-8 border-black rounded-lg cursor-pointer  border-[1px] border-opacity-0 `}
 					>
 						<img src={`/${item.icon}`} />
 						{item.label}
