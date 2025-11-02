@@ -32,24 +32,13 @@ export const api = createApi({
 				limit: number
 			}
 		>({
-			query: ({ users, vehicle, track, page, limit }) => {
-				const params = new URLSearchParams()
-
-				if (users && users.length > 0) {
-					users.forEach((u) => params.append('users', u)) // array format
-				}
-				if (vehicle) params.set('vehicle', vehicle.toString())
-				if (track) params.set('track', track)
-				params.set('page', page.toString())
-				params.set('limit', limit.toString())
-
-				return {
-					url: `sessions?${params.toString()}`,
-					method: 'GET',
-				}
-			},
+			query: (params) => ({
+				url: 'sessionSummary',
+				method: 'GET',
+				params,
+			}),
 		}),
 	}),
 })
 
-export const { useLoginMutation } = api
+export const { useLoginMutation, useGetSessionsQuery } = api
