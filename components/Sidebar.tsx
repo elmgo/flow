@@ -21,7 +21,7 @@ export default function Sidebar() {
 	]
 
 	return (
-		<div className='p-10 pr-30 w-200'>
+		<div className='p-10 mr-20 w-200 border-r-1'>
 			<img src='/logo.svg' className='h-40 m-10 mb-20' />
 			{items.map((item: IMenuItem) => {
 				const selected = pathname.includes(item.route)

@@ -2,7 +2,7 @@
 
 import Dropdown from '@/components/Dropdown'
 import LayersTree from '@/components/LayersTree'
-import Map from '@/components/Map'
+import Map from '@/components/MapGoogle_unused'
 import { useState } from 'react'
 
 export default function PlannerPage() {
@@ -22,59 +22,6 @@ export default function PlannerPage() {
 				<LayersTree selected={selectedLayers} onToggle={onLayerSelect} />
 			</div>
 			<div className='flex flex-col flex-1 pb-20 panel'>
-				<div className='flex gap-20 mb-20'>
-					<Dropdown
-						items={[
-							{
-								label: 'Test label1',
-								onClick: () => {},
-							},
-							{
-								label: 'Test label2',
-								onClick: () => {},
-							},
-							{
-								label: 'Test label3',
-								onClick: () => {},
-							},
-						]}
-						className='flex-1'
-					/>
-					<Dropdown
-						items={[
-							{
-								label: 'Test label1',
-								onClick: () => {},
-							},
-							{
-								label: 'Test label2',
-								onClick: () => {},
-							},
-							{
-								label: 'Test label3',
-								onClick: () => {},
-							},
-						]}
-						className='flex-1'
-					/>
-					<Dropdown
-						items={[
-							{
-								label: 'Test label1',
-								onClick: () => {},
-							},
-							{
-								label: 'Test label2',
-								onClick: () => {},
-							},
-							{
-								label: 'Test label3',
-								onClick: () => {},
-							},
-						]}
-						className='flex-1'
-					/>
-				</div>
 				<div className='flex-1'>
 					<Map />
 				</div>

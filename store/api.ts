@@ -38,7 +38,19 @@ export const api = createApi({
 				params,
 			}),
 		}),
+
+		getGeneralStats: builder.query<any, { userId?: string }>({
+			query: ({ userId, ...params }) => ({
+				url: `sessionSummary/user/${userId}/statistics`,
+				method: 'GET',
+				params,
+			}),
+		}),
 	}),
 })
 
-export const { useLoginMutation, useGetSessionsQuery } = api
+export const {
+	useLoginMutation,
+	useGetSessionsQuery,
+	useGetGeneralStatsQuery,
+} = api

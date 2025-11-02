@@ -64,7 +64,7 @@ p {
 }
 
 .panel {
-	@apply p-20 overflow-hidden bg-white rounded-lg border-1 border-black/10 shadow-panel;
+	@apply p-20 overflow-hidden bg-white rounded-md border-1 border-black/10 shadow-panel;
 }
 
 .panelShadow {

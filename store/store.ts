@@ -10,9 +10,6 @@ export const store = configureStore({
 		[api.reducerPath]: api.reducer,
 		auth: authReducer,
 	},
-	preloadedState: {
-		auth: { token },
-	},
 	middleware: (getDefaultMiddleware) =>
 		getDefaultMiddleware().concat(api.middleware),
 })

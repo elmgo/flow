@@ -6,7 +6,7 @@ interface IAuthState {
 }
 
 const initialState: IAuthState = {
-	token: null,
+	token: typeof window !== 'undefined' ? localStorage.getItem('token') : null,
 	user: null,
 }
 
@@ -20,6 +20,7 @@ export const authSlice = createSlice({
 		) => {
 			state.token = action.payload.accessToken
 			state.user = action.payload.user ?? null
+			localStorage.setItem('token', action.payload.accessToken)
 		},
 		logout: (state) => {
 			state.token = null

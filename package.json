@@ -13,10 +13,12 @@
 		"@react-google-maps/api": "^2.20.7",
 		"classnames": "^2.5.1",
 		"lucide-react": "^0.544.0",
+		"mapbox-gl": "^3.16.0",
 		"next": "15.5.3",
 		"react": "19.1.0",
 		"react-dom": "19.1.0",
 		"react-hot-toast": "^2.6.0",
+		"react-map-gl": "^8.1.0",
 		"sass": "^1.92.1"
 	},
 	"devDependencies": {

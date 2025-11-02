@@ -12,7 +12,7 @@ export default function ScorePanel() {
 				<ScoreCircle
 					percentage={percentage}
 					size={50}
-					strokeWidth={6}
+					strokeWidth={4}
 					gradient={gradient}
 				>
 					<img src={`/${icon}`} />
@@ -28,6 +28,7 @@ export default function ScorePanel() {
 	return (
 		<div className='flex flex-col !p-[40px] panel'>
 			<ScoreCircle
+				strokeWidth={10}
 				size={150}
 				percentage={50}
 				gradient={{ from: '#EDE422', to: '#ED9721' }}

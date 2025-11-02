@@ -39,7 +39,7 @@ export default function Dropdown({
 				className='flex border-1 border-black/10 items-center justify-between w-full px-20 py-10 h-[44px] transition duration-200 bg-white rounded-lg shadow text-greyDark hover:bg-primaryLightest'
 			>
 				<div className='flex items-center w-full h-full mr-10 text-left border-r-1 border-greyLight'>
-					Options
+					Select...
 				</div>
 				<svg
 					className={`w-[12px] h-[12px] ml-2 transform transition-transform duration-200 ${
@@ -47,7 +47,7 @@ export default function Dropdown({
 					}`}
 					fill='none'
 					stroke='currentColor'
-					strokeWidth={3} // thicker stroke
+					strokeWidth={3}
 					viewBox='0 0 24 24'
 					xmlns='http://www.w3.org/2000/svg'
 				>
